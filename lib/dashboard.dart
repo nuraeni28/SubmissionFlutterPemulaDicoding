@@ -151,3 +151,27 @@ class Dashboard extends StatelessWidget {
     );
   }
 }
+
+class LoveButton extends StatefulWidget {
+  @override
+  _LoveButtonState createState() => _LoveButtonState();
+}
+
+class _LoveButtonState extends State<LoveButton> {
+  bool isLove = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      icon: Icon(
+        isLove ? Icons.favorite : Icons.favorite_border,
+        color: Colors.red,
+      ),
+      onPressed: () {
+        setState(() {
+          isLove = !isLove;
+        });
+      },
+    );
+  }
+}

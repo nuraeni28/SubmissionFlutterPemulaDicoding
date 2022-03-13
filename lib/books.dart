@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nutri_shop/models/books_model.dart';
 
-class Books extends StatefulWidget {
-  @override
-  _BooksState createState() => _BooksState();
-}
-
-class _BooksState extends State<Books> {
+class Books extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -47,6 +42,8 @@ class _BooksState extends State<Books> {
                                     fontFamily: 'Poppins',
                                     fontWeight: FontWeight.bold),
                               ),
+                              Spacer(),
+                              LoveButton(),
                             ],
                           ),
                           SizedBox(
@@ -110,6 +107,30 @@ class _BooksState extends State<Books> {
           );
         },
       ),
+    );
+  }
+}
+
+class LoveButton extends StatefulWidget {
+  @override
+  _LoveButtonState createState() => _LoveButtonState();
+}
+
+class _LoveButtonState extends State<LoveButton> {
+  bool isLove = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      icon: Icon(
+        isLove ? Icons.favorite : Icons.favorite_border,
+        color: Colors.red,
+      ),
+      onPressed: () {
+        setState(() {
+          isLove = !isLove;
+        });
+      },
     );
   }
 }

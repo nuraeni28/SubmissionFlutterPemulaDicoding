@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nutri_shop/dashboard.dart';
 import 'package:nutri_shop/loginScreen.dart';
 
-class MainPage extends StatefulWidget {
+class MainPage extends StatelessWidget {
   @override
-  _MainPageState createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
   List pages = [
     Dashboard(),
     LoginScreen(),

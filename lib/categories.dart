@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Categories extends StatefulWidget {
+class Categories extends StatelessWidget {
   @override
-  _Categoriestate createState() => _Categoriestate();
-}
-
-class _Categoriestate extends State<Categories> {
   List<String> categories = [
     "Books",
     "Laboratory Tools",
@@ -14,7 +10,6 @@ class _Categoriestate extends State<Categories> {
     "Accessories"
   ];
   int selectedIndex = 0;
-  @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 50,

@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nutri_shop/models/products_model.dart';
 
-class PopularProduct extends StatefulWidget {
-  @override
-  _PopularProductState createState() => _PopularProductState();
-}
-
-class _PopularProductState extends State<PopularProduct> {
+class PopularProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
